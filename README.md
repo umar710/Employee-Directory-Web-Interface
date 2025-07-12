@@ -12,6 +12,12 @@ A responsive and interactive employee directory application built with HTML, CSS
 - Pagination with configurable items per page
 - Responsive design for desktop, tablet, and mobile
 
+  ## 🌍 Live Deployment
+
+The application is deployed and available at:  
+👉 [https://employee-directory-web-in.netlify.app/index.html](https://employee-directory-web-in.netlify.app/index.html)
+
+
 ## Setup
 
 1. Clone this repository
