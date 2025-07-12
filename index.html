@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Directory</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Employee Directory</h1>
+      <div class="header-actions">
+        <button id="add-employee-btn" class="add-btn">Add Employee</button>
+      </div>
+      <div class="controls">
+        <div class="search-container">
+          <input
+            type="text"
+            id="search"
+            placeholder="Search by name or email..."
+          />
+          <button id="search-btn">Search</button>
+        </div>
+        <div class="filter-sort">
+          <button id="filter-btn">Filter</button>
+          <select id="sort">
+            <option value="">Sort by...</option>
+            <option value="firstName">First Name</option>
+            <option value="department">Department</option>
+          </select>
+          <select id="items-per-page">
+            <option value="10">Show 10</option>
+            <option value="25">Show 25</option>
+            <option value="50">Show 50</option>
+            <option value="100">Show 100</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <div id="filter-sidebar" class="sidebar">
+      <h3>Filter Employees</h3>
+      <button id="close-filter" class="close-btn">&times;</button>
+      <div class="filter-group">
+        <label for="filter-firstName">First Name:</label>
+        <input type="text" id="filter-firstName" />
+      </div>
+      <div class="filter-group">
+        <label for="filter-department">Department:</label>
+        <select id="filter-department">
+          <option value="">All Departments</option>
+          <option value="HR">HR</option>
+          <option value="IT">IT</option>
+          <option value="Finance">Finance</option>
+          <option value="Marketing">Marketing</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="filter-role">Role:</label>
+        <select id="filter-role">
+          <option value="">All Roles</option>
+          <option value="Manager">Manager</option>
+          <option value="Developer">Developer</option>
+          <option value="Analyst">Analyst</option>
+          <option value="Designer">Designer</option>
+        </select>
+      </div>
+      <button id="apply-filter">Apply Filters</button>
+      <button id="reset-filter">Reset</button>
+    </div>
+
+    <main>
+      <div id="employee-list">
+        <!-- Freemarker template will render here -->
+        <#include "templates/employee-list.ftl">
+      </div>
+    </main>
+
+    <div class="pagination">
+      <button id="prev-page" disabled>Previous</button>
+      <span id="page-info">Page 1 of 1</span>
+      <button id="next-page" disabled>Next</button>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Employee Directory App. All rights reserved.</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

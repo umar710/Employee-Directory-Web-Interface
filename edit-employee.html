@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add/Edit Employee</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <h1 id="form-title">Add Employee</h1>
+      <form id="employee-form">
+        <input type="hidden" id="employee-id" />
+
+        <div class="form-group">
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" required />
+          <span class="error-message" id="first-name-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" required />
+          <span class="error-message" id="last-name-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" required />
+          <span class="error-message" id="email-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="department">Department</label>
+          <select id="department" required>
+            <option value="">Select Department</option>
+            <option value="HR">HR</option>
+            <option value="IT">IT</option>
+            <option value="Finance">Finance</option>
+            <option value="Marketing">Marketing</option>
+          </select>
+          <span class="error-message" id="department-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="role">Role</label>
+          <input type="text" id="role" required />
+          <span class="error-message" id="role-error"></span>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" id="cancel-btn">Cancel</button>
+          <button type="submit" id="submit-btn">Save</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="js/form-validation.js"></script>
+  </body>
+</html>
